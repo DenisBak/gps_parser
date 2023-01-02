@@ -8,6 +8,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.web.servlet.ModelAndView;
+import org.w3c.dom.ls.LSOutput;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,12 +18,6 @@ import java.util.List;
 @SpringBootTest
 class GpsParserApplicationTests {
     public static void main(String[] args) throws IOException {
-        List<Coordinate> coordinates;
-        double totalDistance = 0; // in meters
-
-        GpsFileParser fileParser = new GpsFileParser(new File("C:\\Users\\denis\\OneDrive\\Documents\\nmea.log"));
-        coordinates = fileParser.initCoordinates();
-        totalDistance = Coordinate.getDistanceTraveled(coordinates);
-        System.out.println(totalDistance);
+        System.out.println(System.getProperty("user.home"));
     }
 }

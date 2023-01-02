@@ -22,7 +22,7 @@ import java.util.Set;
 public class FileUploader {
     private static int fileId = 0;
     private static final Set<String> allowedExtensionsForFileUpload;
-    private static final Path pathToDir = Path.of("D:\\upload\\");
+    private static final Path pathToDir = Paths.get(System.getProperty("user.home"), "upload");
     private static File fileToParse;
     private static GpsFileParser fileParser;
 
